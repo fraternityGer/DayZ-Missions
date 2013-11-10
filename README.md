@@ -1,8 +1,9 @@
 DayZChernarus Mission System
 =============
 Original code by <a href="https://github.com/theszerdi">TheSzerdi</a>, Falcyn and TAW_Tonic.
+Forked from <a href="https://github.com/lazyink/DayZ-Missions">lazyink</a>
 
-<h3>This has only been tested on Chernarus (1.7.7.1).</h3>  
+<h3>This has only been tested on DayZ Epoch 1.0.2.5.</h3>  
 
  * Before installing you must first customize the fillboxes SQF's inside the Missions/Misc folder and the NPC's load-outs in the addunitserver SQF's. 
  
@@ -95,68 +96,12 @@ The AI require faction settings. If you have SARGE AI you're good to go. Otherwi
 	
 	
 <h3>The Crates</h3>
+<i>Coming soon</i>
 
-Inside the MISC folder, there are 4 differing fillboxes scripts. They are set up like so:
-
-* fillboxes.sqf - Large weapons crate.
-
-* fillboxesS.sqf - Small weapons crate.
-
-* fillboxesH.sqf - High value weapons crate.
-
-* fillboxesM.sqf - Medical crate.
 
 	
 <h3>The Missions</h3>
+<i>Coming soon</i>
 
-The missions are split into two types, major and minor, and run as follows.
-
-
-<h4>Major</h4>
-
-<b>Bandit Weapon Cache.</b>  
-Bandits have discovered a weapons cache! Kill them and secure the weapons for yourself!
-
-<b>Medical C130 Crash.</b>  
-A C-130 carrying medical supplies has crashed and bandits are securing the site! Take them on and secure it's cargo for yourself
-
-<b>Bandit Medical Camp.</b>  
-Bandits have set up a medical re-supply camp! Secure it for yourself!
-
-<b>Bandit Heli Down!</b>  
-A bandit supply helicopter has crash landed! Secure it and it's cargo for yourself!
-
-<b>Medical Ural Attack.</b>  
-Bandits have destroyed a Ural carrying medical supplies and secured it's cargo!
-
-<b>Medical Supply Crate.</b>  
-A medical supply crate has been secured by bandits! Kill them all to get the supplies!
-
-
-<h4>Minor</h4>
-
-<b>Bandit Hunting Party.</b>  
-A bandit hunting party has been spotted! Kill them all and get their supplies!
-
-<b>Medical Outpost.</b>  
-A group of bandits have taken over a Medical Outpost!
-
-<b>Bandit Stash House.</b>  
-A group of bandits have set up a stash house!
-
-<b>Bandit Helicopter Crash.</b>  
-A bandit helicopter has crashed! Kill any survivors and secure the loot!
-
-<b>Bandit Hummer Crash.</b>  
-A bandit Humvee has crashed! Kill any survivors and secure the loot!
-
-<b>Bandit Weapons Truck.</b>  
-A bandit weapons truck has crashed! Kill any survivors and secure the loot!
-
-
-		
-	
-
-
-	
-
+<h3>The Server</h3>
+<a href="http://www.gametracker.com/server_info/85.131.248.26:2302/" target="_blank"><img src="http://cache.www.gametracker.com/server_info/85.131.248.26:2302/b_560_95_1.png" border="0" width="560" height="95" alt=""/></a>
