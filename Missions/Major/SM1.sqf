@@ -16,27 +16,30 @@ _hummer = createVehicle ["UAZ_Unarmed_UN_EP1",[(_coords select 0) + 10, (_coords
 _hummer1 = createVehicle ["UAZ_Unarmed_UN_EP1",[(_coords select 0) + 20, (_coords select 1) - 10,0],[], 0, "CAN_COLLIDE"];
 _hummer2 = createVehicle ["SUV_DZ",[(_coords select 0) + 30, (_coords select 1) + 10,10],[], 0, "CAN_COLLIDE"];
 
-_hummer setVariable ["Mission",1,true];
-_hummer1 setVariable ["Mission",1,true];
-_hummer2 setVariable ["Mission",1,true];
+_hummer setVariable ["Sarge",1,true];
+_hummer1 setVariable ["Sarge",1,true];
+_hummer2 setVariable ["Sarge",1,true];
 
 _crate = createVehicle ["USVehicleBox",_coords,[], 0, "CAN_COLLIDE"];
-[_crate] execVM "\z\addons\dayz_server\missions\misc\fillBoxes.sqf";
+[_crate] execVM "\z\addons\dayz_server\missions\misc\fillBoxesWeaponCache.sqf";
 
-_crate setVariable ["Mission",1,true];
+_crate setVariable ["Sarge",1,true];
 
-_aispawn = [_coords,80,6,6,1] execVM "\z\addons\dayz_server\missions\add_unit_server.sqf";//AI Guards
-sleep 5;
-_aispawn = [_coords,80,6,6,1] execVM "\z\addons\dayz_server\missions\add_unit_server.sqf";//AI Guards
-sleep 5;
-_aispawn = [_coords,40,4,4,1] execVM "\z\addons\dayz_server\missions\add_unit_server.sqf";//AI Guards
-sleep 5;
-_aispawn = [_coords,40,4,4,1] execVM "\z\addons\dayz_server\missions\add_unit_server.sqf";//AI Guards
-sleep 5;
+_rndNPC=floor(random 6);
+for [{ x=0 },{ x < 12+_rndNPC},{ x = x + 1; }] do
+{ 
+	if (x % 2 ==0) 
+	{
+		_aispawn = [_coords,80,6,6,1] execVM "\z\addons\dayz_server\missions\add_unit_server.sqf";//AI Guards
+	} else {
+		_aispawn = [_coords,40,4,4,1] execVM "\z\addons\dayz_server\missions\add_unit_server.sqf";//AI Guards
+	};
+	sleep 5;
+};
 
 waitUntil{{isPlayer _x && _x distance _hummer < 10  } count playableunits > 0}; 
 
-[nil,nil,rTitleText,"The weapons cache is under survivor control!", "PLAIN",6] call RE;
+[nil,nil,rTitleText,"The weapons cache is under player control!", "PLAIN",6] call RE;
 
 [] execVM "debug\remmarkers.sqf";
 MissionGo = 0;
